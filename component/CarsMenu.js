@@ -1,6 +1,8 @@
 import Image from 'next/image'
 const CarsMenu = ({data}) => {
+    if(!data) return <div>Loading</div>
     const{titles,slug,number,stock,profilePicture,tag,mark} = data.fields
+    
     return ( 
         <div className="carsmenu">
             <div className="CarsImage">
